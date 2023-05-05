@@ -1,9 +1,9 @@
 .content2{
-    height: 150vh;
+    height: 170vh;
 }
 .text-content-rsv{
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -15,7 +15,8 @@
     display: flex;
     flex-wrap: wrap;
     width: 1000px;
-    column-gap: 40px;
+    column-gap: 30px;
+    row-gap: 20px;
     justify-content: center;
     position: absolute;
     top: 70%;
@@ -35,7 +36,7 @@
              font-family: 'amiri' sans-serif;
             background-color: transparent;
             border: 2px  solid #ffffff;
-            margin-right: 40px;
+            margin-right: 60px;
             color: #ffffff;
             option{
                 color: black;
