@@ -1,0 +1,22 @@
+.singlemenu{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 50px;
+    justify-content: center;
+    padding: 100px 0;
+    background: url(../../public/image/backgr.jpeg)center/cover no-repeat;
+}
+
+.item{
+    text-align: center;
+    background: whitesmoke;
+    border-radius: 10px;
+    h2{
+        padding: 10px ;
+    }
+    img{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+}

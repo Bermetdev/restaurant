@@ -1,0 +1,104 @@
+.message{
+    background: url(../../../public/image/backgr.jpeg)center/cover no-repeat;
+    color: whitesmoke;
+
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 50px;
+        row-gap: 50px;
+       padding-top: 150px;
+    }
+    &__card{
+        background: transparent;
+        border: 2px solid whitesmoke;
+        padding: 30px 30px;
+        border-radius: 10px;
+        max-width: 300px;
+    }
+
+    .contact{
+        display: flex;
+        justify-content: space-around;
+        &__box{
+            display: flex;
+            justify-content: space-around;
+            height: 550px;
+            margin-top: 100px;
+        }
+       
+        &__left{
+            width: 35%;
+           .top{
+           padding-bottom: 20px;
+           color: white;
+           font-family: 'amiri';
+           p{
+            font-size: 20px;
+            font-weight: 500;
+            font-family: 'amiri';
+           }
+           h1{
+            font-size: 46px;
+            font-weight: 800;
+            padding: 20px 0 20px 0;
+           }
+           }
+           .end{
+            color: white;
+            font-family: 'amiri';
+           }
+        }
+        &__right{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            margin-top: 70px;
+            
+            
+            .messageInfo{
+                height: 160px;
+                width: 450px;
+                font-family: 'amiri';
+                border: 1px solid white;
+                border-radius: 10px;
+                font-size: 16px;
+                background-color: transparent;
+                color: white;
+                padding-left: 10px;
+            }
+            input{
+                height: 50px;
+                font-family: 'amiri';
+                border: 1px solid white;
+                border-radius: 10px;
+                font-size: 16px;
+                background-color: transparent;
+                color: white;
+                padding-left: 10px;
+            }
+            .btn{
+                height: 50px;
+                width: 110px;
+                color: white;
+                background-color: transparent;
+                border: 1px solid white;
+                 font-family: 'amiri';
+                 font-size: 18px;
+                 font-weight: 500;
+            }
+            .btn:hover{
+                color: black;
+                background: whitesmoke;
+                font-size: 20px;
+            }
+        
+        }
+    }
+    .location__map{
+        width: 100%;
+        height: 400px;
+    }
+}

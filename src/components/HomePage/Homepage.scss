@@ -1,0 +1,231 @@
+.home1{
+    background: url('./image/drink2.jpg')center/cover no-repeat;
+    height: 100vh;
+    
+}
+.home2{
+    background: url('./image/home2.jpg')center/cover no-repeat;
+    height: 100vh;
+}
+.subtitle{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 65px;
+    font-weight: 600;
+}
+.titleView{
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: transparent;
+    padding: 18px 30px;
+    font-size: 16px;
+    border: 1px solid white;
+}
+.titleView:hover{
+    color: #000;
+    background: whitesmoke;
+    font-size: 18px;
+
+}
+
+.home__main{
+    padding-bottom: 200px;
+    background: black;
+
+
+
+
+.home__info{
+    display: flex;
+    justify-content: center;
+    column-gap: 80px;
+    padding-top: 160px;
+    color: #ffffff;
+    font-family: "Amiri";
+    .info__left {
+        text-align: center;
+        margin-top: 60px;
+        h1{
+            font-size: 38px;
+            padding-bottom: 20px;
+            
+        }
+        h3{
+            font-size: 22px;
+            font-weight: 400;
+        }
+        h4{
+            font-size: 22px;
+            font-weight: 400;
+            padding-top: 20px; 
+        }
+        h5{
+            font-size: 18px;
+            font-weight: 400;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 400;
+            padding-bottom: 20px;
+        }
+    }
+    .info__mid{
+        align-items: center;
+        img{
+            width: 400px;
+            height: 450px;
+        }
+    }
+    .info__right{
+        text-align: center;
+        margin-top: 50px;
+         
+        h1{
+            font-size: 38px;
+            padding-bottom: 20px;
+        }
+        h3{
+            font-size: 22px;
+            font-weight: 400;
+        }
+        h5{
+            font-size: 18px;
+            font-weight: 400;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 400;
+            padding-bottom: 20px;
+        }
+        button{
+            padding: 12px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: #ffffff;
+        }
+        button:hover{
+            color: #000;
+            background: whitesmoke;
+        }
+    }
+}
+}
+.home__end{
+    display: flex;
+    justify-content: space-between;
+    h1{
+        font-size: 38px;
+        font-weight: 700;
+        position: relative;
+        top: 180px;
+        left: 120px;
+        color: #ffffff;
+        width: 40px;
+    }
+    .end_link{
+        font-size: 20px;
+        font-weight: 500;
+        position: relative;
+        top: 200px;
+        left: 140px;
+        background: transparent;
+        color: #ffffff;
+    }
+    .end__left{
+        height: 450px;
+        width: 430px;
+        background: url(image/home.jpg)center/cover no-repeat ;
+    }
+    .end__right{
+        height: 450px;
+        width: 430px;
+        background: url(image/drink.jpg)center/cover no-repeat ;
+       
+    }
+    
+        .map{
+            height: 446px;
+            // width: 380px;
+           }
+       
+       
+}
+.home__rec{
+    color: #ffffff;
+    background: black;
+    padding: 100px;
+    font-family: "Amiri";
+    &_info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-size: 50px;
+            font-weight: 700;
+        }
+        h2{
+            font-weight: 500;
+        }
+        h3{
+            font-weight: 500;
+        }
+        p{
+            width: 400px;
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+    .rec__menu{
+        display: flex;
+        justify-content: center;
+       padding-top: 70px;
+       
+        .rec__left{
+            width: 350px;
+            align-items: center;
+           h2{
+            font-weight: 500;
+            font-size: 28px;
+            margin-top: 20px;
+           }
+           p{
+            font-size: 18px;
+           }
+           button{
+            width: 180px;
+            height: 46px;
+            margin-top: 35px;
+               padding: 8px 28px;
+               font-size: 20px;
+               color: #fff;
+               font-family: "Amiri";
+               border: #ffffff solid 1px;
+               background-color: transparent;
+           }
+           button:hover{
+            color: #000;
+            background: whitesmoke;
+        }
+        }
+        .rec__right{
+            .video{
+                width: 500px;
+                height: 550px;
+            }
+        }
+    }
+}

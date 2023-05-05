@@ -1,0 +1,36 @@
+.product{
+    background: url(../../../public/image/backgr.jpeg)center/cover no-repeat;
+    height: 100vh;
+    color: whitesmoke;
+    .oneproduct{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        column-gap: 40px;
+        transform: translate(-50%, -50%);
+        img{
+            border-radius: 20px;
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            h2{
+                font-size: 32px;
+            }
+            h3{
+                font-size: 26px;
+            }
+            h4{
+                max-width: 250px;
+                font-family: "Amiri";
+            }
+        }
+           
+        
+    
+    }
+    }
