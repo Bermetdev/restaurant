@@ -21,6 +21,8 @@ const Menu = () => {
   const [searchItem, setSearchItem] = useState("")
 
   const filterData = menu.filter((item)=> item.name.includes(searchItem))
+  // const filterDataItem = menuItem.filter((item)=> item.name.includes(searchItem))
+
 
   return (
     <section>
@@ -38,13 +40,15 @@ const Menu = () => {
         <button className="btn" onClick={handleMenu}> All Menu</button>
 
         <button className="btn" onClick={handleMenuItem}> Category </button>
+        <NavLink to = "/order"> <button onClick={() => toTop()} className="btn">  Pre-Order  </button> </NavLink>
 
-        <input type="search" name="" id="" value={searchItem} onChange={(e) => setSearchItem(e.target.value)}  placeholder="Search" />
+        <input  className="menu__input" type="search" name="" id="" value={searchItem} onChange={(e) => setSearchItem(e.target.value)}  placeholder="Search" />
 
         </div>
 
        
-        {menuItem.map((el) => (
+        {menuItem
+        .map((el) => (
           <div className="menu__item">
             <div className="items__left">
               <img src={el.image} alt="" />

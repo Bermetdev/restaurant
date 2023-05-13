@@ -7,7 +7,35 @@ export const Context = (props) => {
   const [reservation, setReservation] = useState([])
   const [menuItem, setMenuItem] = useState([]);
   const [message, setMessage] = useState([])
-  const [order, setOrder] = useState ([])
+  const [preOrder, setPreOrder] = useState ([])
+  
+
+  const plusPreOrder = (id) => {
+    setPreOrder(prev => prev.map(item => {
+        if (menu.id === id) {
+            return { ...menu, count: menu.count + 1 }
+        }
+      
+        return menu
+    }))
+}
+const minusPreOrder = (id) => {
+
+    let count = preOrder.find(menu => menu.id === id).count
+
+    if (count === 1) {
+        setPreOrder(prev => prev.filter(menu => menu.id !== id))
+    } else{
+        setPreOrder(prev => prev.map(menu => {
+            if (menu.id === id) {
+                return { ...menu, count: menu.count - 1 }
+            }
+            return menu
+        }))
+    } 
+    
+
+}
 
   useEffect(() => {
     axios("http://localhost:8080/reservation").then(
@@ -19,7 +47,7 @@ export const Context = (props) => {
 
   useEffect(() => {
     axios("http://localhost:8080/preOrder").then(
-      ({ data }) => setOrder(data),
+      ({ data }) => setPreOrder(data),
     );
   }, [])
 
@@ -54,7 +82,9 @@ export const Context = (props) => {
     handleMenuItem,
     reservation,
     message,
-    order
+    preOrder,
+    plusPreOrder,
+    minusPreOrder
   };
 
   return (

@@ -3,10 +3,29 @@ import { Parallax } from "react-parallax";
 import axios from "axios";
 import reserve from "./image/img2.jpg";
 import "./Reservation.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { CustomContext } from "../../utils/context";
+import { animateScroll } from "react-scroll";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Keyboard, Pagination, Navigation, Autoplay } from "swiper"
+import floorplan from './image/plan.jpg'
+import outplan from './image/plan-outside.jpg'
+
+
 
 const Reservation = () => {
+
+  const toTop = () => {
+    animateScroll.scrollToTop({
+      delay: 0,
+      duration: 0,
+    });
+  };
+
+
   const navigate = useNavigate();
 
   const {reservation} = useContext(CustomContext)
@@ -48,13 +67,14 @@ const Reservation = () => {
        if(isReserved && isReservedTime){
         alert('занято')
        } else{
+        
         axios
         .post("http://localhost:8080/reservation", reservations)
         .then(({ data }) => {
           setAllDate(data)
           setPerson("");
           setDate("");
-          navigate("/");
+          navigate("/reservation");
           setTime("");
           setName("");
           setEmail("");
@@ -150,13 +170,39 @@ const Reservation = () => {
               placeholder="Your phone-number"
             />
 
-            <button className="button" type="submit">
-              {" "}
+            <button onClick={() => toTop()} className="button" type="submit">
+              {""}
               Book a table
             </button>
           </form>
         </div>
       </Parallax>
+
+      <div className="floorplan">
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        keyboard={{
+          enabled: true,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        autoplay={true}
+        modules={[Keyboard, Pagination, Navigation,Autoplay]}
+        className="mySwiper"
+      >
+        <SwiperSlide><div className='slide'>
+        <img className="img" src={floorplan} alt="" />
+
+            </div> 
+             </SwiperSlide>
+        <SwiperSlide> <div className='slide'>
+        <img src={outplan} alt="" />
+            </div></SwiperSlide>
+      </Swiper>
+      </div>
     </section>
   );
 };

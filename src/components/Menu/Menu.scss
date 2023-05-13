@@ -9,19 +9,20 @@
         padding-top: 50px;
 
         .btn{
-           padding: 5px 30px;
-           font-size: 22px;
+           font-size: 20px;
            color: #fff;
            font-family: "Amiri";
            border: #ffffff solid 1px;
            background-color: transparent;
-           margin-right: 85px;
+           margin: 30px 50px 30px 50px;
+                  padding: 5px 30px;
+                //   margin-left: 100px;
      }
     .btn:hover{
         color: black;
         background: whitesmoke;
     }
-    input{
+    .menu__input{
         color: #fff;
         font-family: "Amiri";
         border: 1px solid white;
@@ -30,12 +31,17 @@
         height: 53px;
         align-items: center;
         padding: 8px;
-        margin-left: 55px;
+        // margin-left: 55px;
         align-items: center;
         font-size: 22px;
         margin: 30px 10px 0 50px;
-    
     } 
+    a{
+        color: #ffffff;
+    }
+    a:hover{
+        color: black;
+    }
     }
     //category
    
@@ -105,31 +111,5 @@
             margin: 10px;
         }
     }
-    // &__items{
-    //     display: flex;
-    //     flex-direction: column;
-    //     text-align: center;
-    //     color: whitesmoke;
-    // }
-    // img{
-    //     border-radius: 15px;
-    // }
-    // h2{
-    //     margin: 10px;
-    // }
-    button{
-        margin: 30px 0 30px 0;
-       padding: 5px 30px;
-       font-size: 18px;
-       color: #fff;
-       font-family: "Amiri";
-       border: #ffffff solid 1px;
-       background-color: transparent;
-       margin-left: 100px;
- }
-button:hover{
-    color: black;
-    background: whitesmoke;
-}
 
 }

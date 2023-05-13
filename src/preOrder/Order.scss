@@ -1,10 +1,78 @@
 .menu{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 100px 20px;
-    column-gap: 40px;
+   padding-top: 100px;
+   text-align: center;
+   h1{
+    padding-top: 50px;
+    font-size: 38px;
+   }
+   .order_p{
+    font-size: 20px;
+   }
+
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 100px 20px 50px 0;
+        column-gap: 60px;
+        row-gap: 40px;
+        justify-content: center;
+        .menu__items{
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+            .select__btn{
+                width: 130px;
+                background: transparent;
+                color: #ffffff;
+                border: 1px solid whitesmoke;
+                font-size: 20px;
+                padding: 5px;
+                input{
+                    height: 20px;
+                    width: 35px;
+                }
+            }
+           }
+    }
+  
+    .info{
+        height: 47px;
+        padding: 15px 80px;
+        font-size: 20px;
+        font-weight: 500;
+        width: 300px;
+       background-color: transparent;
+       color: white;
+       border: 2px  solid #ffffff;
+       margin: 30px 30px 60px 30px;
+    
+    }
+    .preOrder{
+        display: flex;
+        margin-left: 550px;
+        padding: 5px 20px;
+        font-size: 24px;
+        
+    }
+    .preOrder:hover{
+        background: darkblue
+    }
+    .request{
+        position: fixed;
+        backdrop-filter: blur(5px);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+    }
 }
-button{
-    padding: 5px 15px;
-    font-size: 24px;
-}
+
+

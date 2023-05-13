@@ -81,3 +81,21 @@ h1{
     color: black;
     background: whitesmoke;
 }
+.floorplan{
+background: url("../../../public/image/backgr.jpeg");
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+img{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    width: 90%;
+    height: 100%;
+}
+.img{
+    height: 500px;
+}
+}

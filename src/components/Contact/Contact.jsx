@@ -9,8 +9,17 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import Iframe from 'react-iframe'
 import { CustomContext } from '../../utils/context';
+import { animateScroll } from "react-scroll";
+
 
 const Contact = () => {
+
+    const toTop = () => {
+        animateScroll.scrollToTop({
+          delay: 0,
+          duration: 0,
+        });
+      };
 
     const navigate = useNavigate()
 
@@ -20,9 +29,14 @@ const Contact = () => {
     const [messageAbout, setMessageAbout] = useState("")
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
 
     const postMessage = (e) => {
         e.preventDefault()
+
+        setIsSubmitted(true); 
+
 
         const personMessage = {
             messageAbout,
@@ -37,12 +51,12 @@ const Contact = () => {
                 setMessageAbout("")
                 setName("")
                 setEmail("")
-                navigate("/")
+                navigate("/contact")
             })
     }
-    console.log(messageAbout);
-    console.log(name);
-    console.log(email);
+
+    const reverseArr = message.reverse()
+
 
 
 
@@ -57,11 +71,12 @@ const Contact = () => {
             <div className="message__top">
 <div className="message__wrapper">
 {
-                message.map((el)=> 
+                reverseArr.slice(0,3)
+                .map((el)=> 
 
                 (
                     <div className="message__card">
-                        <p>{el.message}</p>
+                        <p>{el.messageAbout}</p>
                         <h5>{el.name}</h5>
                         <h5>{el.email}</h5>
                     </div>
@@ -89,7 +104,9 @@ const Contact = () => {
                     <input value={messageAbout} onChange={(e) => setMessageAbout(e.target.value)} className='messageInfo' type="text" placeholder='Your Message' />
                     <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='Your Name'/>
                     <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Your Email'/>
-                    <button className='btn' type="submit"> Submit </button>
+                    <button onClick={() => toTop()} className='btn' type="submit"> Submit </button>
+                    {isSubmitted && <p className='request'>Your message is sent! </p>}
+
                 </form>
             </div>
             </div>

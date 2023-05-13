@@ -46,13 +46,13 @@ const navigate = useNavigate()
         <SwiperSlide><div className='home1'>
             <h2 className='subtitle'>Exclusive drink service</h2>
             <h1 className='title'>Coctail stage evenings</h1>
-          <NavLink to='/menu'>  <button className='titleView'>View more...</button> </NavLink> 
+          <NavLink to='/menu'>  <button onClick={() => toTop()} className='titleView'>View more...</button> </NavLink> 
             </div> 
              </SwiperSlide>
         <SwiperSlide> <div className='home2'>
         <h2 className='subtitle'>Exclusive drink service</h2>
             <h1 className='title'>Coctail stage evenings</h1>
-            <NavLink to='/menu'>  <button className='titleView'>View more...</button> </NavLink> 
+            <NavLink to='/menu'>  <button onClick={() => toTop()} className='titleView'>View more...</button> </NavLink> 
 
             </div></SwiperSlide>
      

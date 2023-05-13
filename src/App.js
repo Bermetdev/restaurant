@@ -9,6 +9,7 @@ import Menu from './components/Menu/Menu';
 import MenuSinglepage from './singlepage/MenuSinglepage';
 import OneProduct from './singlepage/OneProduct/OneProduct';
 import Order from './preOrder/Order';
+import PreOrder from './preOrder/PreOrder';
 
 function App() {
   return (
@@ -22,10 +23,12 @@ function App() {
                     <Route path='menu' element={<Menu/>}/>
                     {/* <Route path='menu/:category' element={<MenuSinglepage/>}/> */}
                     <Route path='menu/:id' element={<MenuSinglepage/>}/>
+                    <Route path='order' element={<Order/>}/>
+                    <Route path='preorder' element={<PreOrder/>}/>
+
 
                 </Route>
                 <Route path='oneproduct/:id' element={<OneProduct/>}/>
-                <Route path='order' element={<Order/>}/>
 
             </Routes>
 
